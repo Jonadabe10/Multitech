@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MultiTech</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>MultiTech</h1>
+        <p>Tudo em eletrônicos, acessórios e novidades num só lugar!</p>
+    </header>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#contato">Contato</a>
+        <a href="#promocoes">Promoções</a>
+
+        <button id="abrir-carrinho">
+            🛒 Carrinho (<span id="contador-carrinho">0</span>)
+        </button>
+    </nav>
+
+    <main id="produtos">
+        <h2>Nossos Produtos</h2>
+        <p>Confira todos os nossos produtos disponíveis!</p>
+
+        <section>
+            <article>
+                <h3>Fone Bluetooth</h3>
+                <img src="fone.jpg" alt="Fone Bluetooth preto">
+                <p>Qualidade de som garantida!</p>
+                <p>Preço: R$119,90</p>
+                <button>Adicionar ao carrinho</button>
+            </article>
+
+            <article>
+                <h3>Mouse Gamer</h3>
+                <img src="mouse.jpg" alt="Mouse Gamer">
+                <p>Velocidade cirúrgica. Resposta instantânea.</p>
+                <p>Preço: R$89,90</p>
+                <button>Adicionar ao carrinho</button>
+            </article>
+
+            <article>
+                <h3>Teclado 60% mecânico</h3>
+                <img src="teclado 60%.jpg" alt="Teclado 60% mecânico">
+                <p>Mais espaço na mesa e mais qualidade ao jogar.</p>
+                <p>Preço: R$150,00</p>
+                <button>Adicionar ao carrinho</button>
+            </article>
+
+            <article>
+                <h3>SSD NVMe 500GB</h3>
+                <img src="ssd.jpg" alt="SSD NVMe 500GB">
+                <p>Mais velocidade e desempenho para trabalhar ou jogar.</p>
+                <p>Preço: R$839,90</p>
+                <button>Adicionar ao carrinho</button>
+            </article>
+        </section>
+    </main>
+
+    <div id="fundo-carrinho" class="fundo-carrinho">
+        <aside id="janela-carrinho" class="janela-carrinho">
+
+            <div class="topo-carrinho">
+                <h2>Meu carrinho</h2>
+                <button id="fechar-carrinho" aria-label="Fechar carrinho">
+                    ✕
+                </button>
+            </div>
+
+            <p id="carrinho-vazio">Seu carrinho está vazio.</p>
+
+            <div id="lista-carrinho"></div>
+
+            <div class="total-carrinho">
+                <h3>Total: R$ 0,00</h3>
+            </div>
+
+        </aside>
+    </div>
+
+    <footer id="contato">
+        <p>© 2026 MultiTech - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

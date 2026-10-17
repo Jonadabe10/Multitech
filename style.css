@@ -1,0 +1,212 @@
+article img {
+    width: 200px;
+    height: 180px;
+    object-fit: contain;
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+article {
+    width: 220px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #1e293b;
+}
+header {
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+header h1 {
+    font-size: 36px;
+    margin: 0 0 10px;
+}
+header p {
+    margin: 0;
+    color: #cbd5e1;
+}
+nav {
+    background-color: #1e293b;
+    padding: 15px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #38bdf8;
+}
+article {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+article:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+article button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+article button:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.05);
+}
+/* Fundo escuro atras do carrinho */
+.fundo-carrinho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,5);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0,3s ease, visibility 0,3s ease;
+}
+/* Janela lateral */
+.janela-carrinho {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 380px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+    background-color: white;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+/* quando o carrinho estiver aberto */
+.fundo-carrinho.aberto {
+    opacity: 1;
+    visibility: visible;
+}
+.fundo-carrinho.aberto .janela-carrinho {
+    transform: translateX(0);
+}
+/* Cabeçalho da janela */
+.topo-carrinho {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 15px;
+}
+.topo-carrinho h2 {
+    margin: 0;
+    color: #111827;
+}
+/* Botão de fechar */
+#fechar-carrinho {
+    background-color: #e5e7eb;
+    color: #111827;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#fechar-carrinho:hover {
+    background-color: #d1d5db;
+}
+
+/* Total da compra */
+.total-carrinho {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #e5e7eb;
+}
+/* Correção janela lateral */
+.fundo-carrinho {
+    position: fixed; 
+    inset: 0;
+    z-index: 1000;
+}
+.fundo-carrinho-aberto {
+    opacity: 1;
+    visibility: visible;
+}
+.janela-carrinho {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 380px;
+    max-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: #ffffff;
+    color: #111827;
+    z-index: 1001;
+}
+.fundo-carrinho.aberto .janela-carrinho {
+    transform: translateX(0);
+}
+/* Fundo escuro atrás do carrinho */
+.fundo-carrinho {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Mostra o fundo quando o carrinho abre */
+.fundo-carrinho.aberto {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Painel branco do carrinho */
+.janela-carrinho {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 380px;
+    max-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    color: #111827;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+/* Desliza o carrinho para dentro da tela */
+.fundo-carrinho.aberto .janela-carrinho {
+    transform: translateX(0);
+}
